@@ -1,70 +1,27 @@
-# Getting Started with Create React App
+![dffd](https://miro.medium.com/max/1400/1*dqN-Wz9-XZGG6lijEPoJMw.png)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+### 去中心化交易所
 
-In the project directory, you can run:
+这是一个仿uniswap的去中心化交易所。系统是基于以太坊网络开发的。前端部分代码是react写的，用的语言是javascript。开发环境工具用的是hardhat,选择他是因为灵活度更高，可以同时设置不同版本的solc
 
-### `npm start`
+### 功能
+主要功能有交易，流动性挖矿，询价，创建交易对等等。
+1. 可以进行eth=>ERC20 token交易
+2. 可以进行ERC20 token=>eth交易
+3. 可以进行ERC20 token=>token交易
+4. 交易询价
+5. 获取账户余额
+6. 添加流动性
+7. 移除流动性
+8. 流动性询价
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 文件目录
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. 智能合约/contracts里面放了智能合约代码，包括工厂合约，配对合约，路由合约，WETH合约（ETH的ERC20形式，方便交易），以及一些安全数学计算库，和一些合约的接口代码
+2. 智能合约/contracts/arifacts里面放了编译之后的ABI json，可以拷贝到前端代码中，方便前端调用
+3. 智能合约/scripts/deploy.js是部署代码，部署到本地，测试环境或者生产环境（还没写好）
+4. 智能合约/test里面是测试代码， 运行`npx hardhat test`可以对智能合约进行测试
+5. 前端/src/ethereumFunctions.js里面是一些主要的访问以太坊网络的方法（询价，交易，钱包余额）
+6. 前端/src/LiquidityFunctions.js里面是和流动性相关的一些函数封装（添加，移除，询价）
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
