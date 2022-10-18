@@ -1,0 +1,279 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "/Users/nobbyheell/Documents/GitHub/Uniswap/zzq/hardhat/factory/contracts/UniswapV2Factory.sol": {
+      "lastModificationDate": 1665920347290,
+      "contentHash": "953b81e7dac34acd7760ef0de72d6f84",
+      "sourceName": "contracts/UniswapV2Factory.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "=0.5.16"
+      ],
+      "artifacts": [
+        "IERC20",
+        "IUniswapV2Callee",
+        "IUniswapV2ERC20",
+        "IUniswapV2Factory",
+        "IUniswapV2Pair",
+        "Math",
+        "SafeMath",
+        "UQ112x112",
+        "UniswapV2ERC20",
+        "UniswapV2Factory",
+        "UniswapV2Pair"
+      ]
+    },
+    "/Users/nobbyheell/Documents/GitHub/Uniswap/zzq/hardhat/factory/contracts/WETH9.sol": {
+      "lastModificationDate": 1665920339152,
+      "contentHash": "5b42a80d8a73e44c9a778851e3de5753",
+      "sourceName": "contracts/WETH9.sol",
+      "solcConfig": {
+        "version": "0.4.18",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.4.18"
+      ],
+      "artifacts": [
+        "WETH9"
+      ]
+    },
+    "/Users/nobbyheell/Documents/GitHub/Uniswap/zzq/hardhat/factory/contracts/IERC20.sol": {
+      "lastModificationDate": 1665920515527,
+      "contentHash": "a7de31576b4fe81158a5e5565152c22e",
+      "sourceName": "contracts/IERC20.sol",
+      "solcConfig": {
+        "version": "0.6.6",
+        "settings": {
+          "evmVersion": "istanbul",
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "=0.6.6"
+      ],
+      "artifacts": [
+        "IERC20"
+      ]
+    },
+    "/Users/nobbyheell/Documents/GitHub/Uniswap/zzq/hardhat/factory/contracts/UniswapV2Router02.sol": {
+      "lastModificationDate": 1665922068892,
+      "contentHash": "69f62f22c3cc5f2fd889f8691c45df71",
+      "sourceName": "contracts/UniswapV2Router02.sol",
+      "solcConfig": {
+        "version": "0.6.6",
+        "settings": {
+          "evmVersion": "istanbul",
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IERC20.sol",
+        "./SafeMath.sol"
+      ],
+      "versionPragmas": [
+        "=0.6.6"
+      ],
+      "artifacts": [
+        "IUniswapV2Factory",
+        "IUniswapV2Pair",
+        "IUniswapV2Router01",
+        "IUniswapV2Router02",
+        "IWETH",
+        "TransferHelper",
+        "UniswapV2Library",
+        "UniswapV2Router02"
+      ]
+    },
+    "/Users/nobbyheell/Documents/GitHub/Uniswap/zzq/hardhat/factory/contracts/SafeMath.sol": {
+      "lastModificationDate": 1665920524936,
+      "contentHash": "7b00746ddf07f4809cb7b4a0d991542f",
+      "sourceName": "contracts/SafeMath.sol",
+      "solcConfig": {
+        "version": "0.6.6",
+        "settings": {
+          "evmVersion": "istanbul",
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "=0.6.6"
+      ],
+      "artifacts": [
+        "SafeMath"
+      ]
+    },
+    "/Users/nobbyheell/Documents/GitHub/Uniswap/zzq/hardhat/factory/contracts/Token02.sol": {
+      "lastModificationDate": 1665920519618,
+      "contentHash": "a0cec11784dcc228b9bf0ed807a2aa45",
+      "sourceName": "contracts/Token02.sol",
+      "solcConfig": {
+        "version": "0.6.6",
+        "settings": {
+          "evmVersion": "istanbul",
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IERC20.sol"
+      ],
+      "versionPragmas": [
+        "=0.6.6"
+      ],
+      "artifacts": [
+        "Token02"
+      ]
+    },
+    "/Users/nobbyheell/Documents/GitHub/Uniswap/zzq/hardhat/factory/contracts/Token01.sol": {
+      "lastModificationDate": 1665920517887,
+      "contentHash": "c7915e0ea1883f1633e3ce3ea8f0669f",
+      "sourceName": "contracts/Token01.sol",
+      "solcConfig": {
+        "version": "0.6.6",
+        "settings": {
+          "evmVersion": "istanbul",
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IERC20.sol"
+      ],
+      "versionPragmas": [
+        "=0.6.6"
+      ],
+      "artifacts": [
+        "Token01"
+      ]
+    }
+  }
+}
