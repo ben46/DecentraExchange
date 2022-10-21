@@ -306,17 +306,17 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/WETH9.sol": "WETH9"
+			"智能合约/contracts/WETH9.sol": "WETH9"
 		},
 		"libraries": {},
 		"optimizer": {
-			"enabled": true,
+			"enabled": false,
 			"runs": 200
 		},
 		"remappings": []
 	},
 	"sources": {
-		"contracts/WETH9.sol": {
+		"智能合约/contracts/WETH9.sol": {
 			"keccak256": "0x2a904bf9691c822a1ed1fce5ae4328bbfb847d3863b285e1f7fa1f46ba0aa97c",
 			"urls": [
 				"bzzr://8c0de2379ae2fada75bbab6394585d79bc134322573f2e83878b92f4a0809488"
