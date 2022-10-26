@@ -303,18 +303,19 @@ contract UniswapV2Pair is IUniswapV2Pair, UniswapV2ERC20 {
 
     // this low-level function should be called from a contract which performs important safety checks
     function mint(address to) external lock returns (uint liquidity) {
-        (uint112 _reserve0, uint112 _reserve1,) = getReserves(); // gas savings
-        uint balance0 = IERC20(token0).balanceOf(address(this)); // 咱们这个地址在token合约里有多少个after
+        (uint112 _reserve0, uint112 _reserve1,) = getReserves(); // 原来有多少个
+        uint balance0 = IERC20(token0).balanceOf(address(this)); // 现在有多少个
         uint balance1 = IERC20(token1).balanceOf(address(this));
-        uint amount0 = balance0.sub(_reserve0); // 咱们储备有多少个（转进来之前）before
+        uint amount0 = balance0.sub(_reserve0); // 计算新增的数量
         uint amount1 = balance1.sub(_reserve1); 
 
         bool feeOn = _mintFee(_reserve0, _reserve1);
         uint _totalSupply = totalSupply; // gas savings, must be defined here since totalSupply can update in _mintFee
         if (_totalSupply == 0) {
-            liquidity = Math.sqrt(amount0.mul(amount1)).sub(MINIMUM_LIQUIDITY); // K = (x * y)^0.5 - 最小流动性（增加黑客攻击成本)
+            liquidity = Math.sqrt(amount0.mul(amount1)).sub(MINIMUM_LIQUIDITY); // liquidity = (x * y)^0.5 - 最小流动性（增加黑客攻击成本)
            _mint(address(0), MINIMUM_LIQUIDITY); // 永久锁死最开始的最小流动性tokens,
         } else {
+            //     现在的流动代币数量 / 
             liquidity = Math.min(amount0.mul(_totalSupply) / _reserve0, amount1.mul(_totalSupply) / _reserve1);
         }
         require(liquidity > 0, 'UniswapV2: INSUFFICIENT_LIQUIDITY_MINTED');

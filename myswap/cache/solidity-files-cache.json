@@ -1,0 +1,145 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "/Users/nobbyheell/Documents/GitHub/myuniswap/myswap/contracts/IERC20.sol": {
+      "lastModificationDate": 1666668200583,
+      "contentHash": "9b72f664179ab2cf3dbbc78f1d73d44d",
+      "sourceName": "contracts/IERC20.sol",
+      "solcConfig": {
+        "version": "0.8.16",
+        "settings": {
+          "evmVersion": "istanbul",
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.6"
+      ],
+      "artifacts": [
+        "IERC20"
+      ]
+    },
+    "/Users/nobbyheell/Documents/GitHub/myuniswap/myswap/contracts/SafeMath.sol": {
+      "lastModificationDate": 1666668203771,
+      "contentHash": "f0e185ffb0ee5e0cd4d4e2f529cd1539",
+      "sourceName": "contracts/SafeMath.sol",
+      "solcConfig": {
+        "version": "0.8.16",
+        "settings": {
+          "evmVersion": "istanbul",
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.6"
+      ],
+      "artifacts": [
+        "SafeMath"
+      ]
+    },
+    "/Users/nobbyheell/Documents/GitHub/myuniswap/myswap/contracts/WETH10.sol": {
+      "lastModificationDate": 1666746601235,
+      "contentHash": "8addbd0011cb716259c4074bb7eb1af2",
+      "sourceName": "contracts/WETH10.sol",
+      "solcConfig": {
+        "version": "0.8.16",
+        "settings": {
+          "evmVersion": "istanbul",
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.6"
+      ],
+      "artifacts": [
+        "WETH10"
+      ]
+    },
+    "/Users/nobbyheell/Documents/GitHub/myuniswap/myswap/contracts/WETH9.sol": {
+      "lastModificationDate": 1666672356764,
+      "contentHash": "5f5b5908fb4661482bb4e1053a3e825e",
+      "sourceName": "contracts/WETH9.sol",
+      "solcConfig": {
+        "version": "0.8.16",
+        "settings": {
+          "evmVersion": "istanbul",
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [],
+      "artifacts": []
+    }
+  }
+}

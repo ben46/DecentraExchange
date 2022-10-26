@@ -123,6 +123,7 @@ export async function removeLiquidity(
   const pairAddress = await factory.getPair(address1, address2);
   const pair = new Contract(pairAddress, PAIR.abi, signer);
 
+  // 授权给路由合约操作
   await pair.approve(routerContract.address, liquidity);
 
   console.log([
@@ -135,6 +136,7 @@ export async function removeLiquidity(
     deadline,
   ]);
 
+  // 调用路由合约，移除流动性
   if (address1 === wethAddress) {
     // Eth + Token
     await routerContract.removeLiquidityETH(
