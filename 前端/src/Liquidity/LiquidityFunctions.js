@@ -4,18 +4,9 @@ import { fetchReserves, getDecimals } from "../ethereumFunctions";
 const ERC20 = require("../build/ERC20.json");
 const PAIR = require("../build/IUniswapV2Pair.json");
 
-// Function used to add Liquidity to any pair of tokens or token-AUT
-// To work correctly, there needs to be 9 arguments:
-//    `address1` - An Ethereum address of the coin to add from (either a token or AUT)
-//    `address2` - An Ethereum address of the coin to add to (either a token or AUT)
-//    `amount1` - A float or similar number representing the value of address1's coin to add
-//    `amount2` - A float or similar number representing the value of address2's coin to add
-//    `amount1Min` - A float or similar number representing the minimum of address1's coin to add
-//    `amount2Min` - A float or similar number representing the minimum of address2's coin to add
-//    `routerContract` - The router contract to carry out this trade
-//    `accountAddress` - An Ethereum address of the current user's account
-//    `provider` - The current provider
-//    `signer` - The current signer
+// 用于向任何一对代币或代币 AUT 添加流动性的函数
+//    `address1` - from token
+//    `address2` - to token
 export async function addLiquidity(
   address1,
   address2,
@@ -95,17 +86,6 @@ export async function addLiquidity(
   }
 }
 
-// Function used to remove Liquidity from any pair of tokens or token-AUT
-// To work correctly, there needs to be 9 arguments:
-//    `address1` - An Ethereum address of the coin to recieve (either a token or AUT)
-//    `address2` - An Ethereum address of the coin to recieve (either a token or AUT)
-//    `liquidity_tokens` - A float or similar number representing the value of liquidity tokens you will burn to get tokens back
-//    `amount1Min` - A float or similar number representing the minimum of address1's coin to recieve
-//    `amount2Min` - A float or similar number representing the minimum of address2's coin to recieve
-//    `routerContract` - The router contract to carry out this trade
-//    `accountAddress` - An Ethereum address of the current user's account
-//    `provider` - The current provider
-//    `signer` - The current signer
 export async function removeLiquidity(
   address1,
   address2,
@@ -143,6 +123,7 @@ export async function removeLiquidity(
   const pairAddress = await factory.getPair(address1, address2);
   const pair = new Contract(pairAddress, PAIR.abi, signer);
 
+  // 授权给路由合约操作
   await pair.approve(routerContract.address, liquidity);
 
   console.log([
@@ -155,6 +136,7 @@ export async function removeLiquidity(
     deadline,
   ]);
 
+  // 调用路由合约，移除流动性
   if (address1 === wethAddress) {
     // Eth + Token
     await routerContract.removeLiquidityETH(
@@ -193,14 +175,6 @@ const quote = (amount1, reserve1, reserve2) => {
   const amount2 = amount1 * (reserve2 / reserve1);
   return [amount2];
 };
-
-// Function used to get a quote of the liquidity addition
-//    `address1` - An Ethereum address of the coin to recieve (either a token or AUT)
-//    `address2` - An Ethereum address of the coin to recieve (either a token or AUT)
-//    `amountA_desired` - The prefered value of the first token that the user would like to deploy as liquidity
-//    `amountB_desired` - The prefered value of the second token that the user would like to deploy as liquidity
-//    `factory` - The current factory
-//    `signer` - The current signer
 
 async function quoteMintLiquidity(
   address1,
@@ -319,12 +293,8 @@ export async function quoteAddLiquidity(
   }
 }
 
-// Function used to get a quote of the liquidity removal
-//    `address1` - An Ethereum address of the coin to recieve (either a token or AUT)
-//    `address2` - An Ethereum address of the coin to recieve (either a token or AUT)
-//    `liquidity` - The amount of liquidity tokens the user will burn to get their tokens back
-//    `factory` - The current factory
-//    `signer` - The current signer
+
+
 
 export async function quoteRemoveLiquidity(
   address1,

@@ -48,9 +48,7 @@ export async function getAccount() {
   return accounts[0];
 }
 
-//This function checks if a ERC20 token exists for a given address
-//    `address` - The Ethereum address to be checked
-//    `signer` - The current signer
+//此函数检查给定地址是否存在 ERC20 代币
 export function doesTokenExist(address, signer) {
   try {
     return new Contract(address, ERC20.abi, signer);
@@ -69,12 +67,7 @@ export async function getDecimals(token) {
     return decimals;
 }
 
-// This function returns an object with 2 fields: `balance` which container's the account's balance in the particular token,
-// and `symbol` which is the abbreviation of the token name. To work correctly it must be provided with 4 arguments:
-//    `accountAddress` - An Ethereum address of the current user's account
-//    `address` - An Ethereum address of the token to check for (either a token or AUT)
-//    `provider` - The current provider
-//    `signer` - The current signer
+//此函数返回一个包含 2 个字段的对象：`balance` 容器是特定令牌中的帐户余额，以及 `symbol` 是令牌名称的缩写。 为了正常工作，它必须提供 4 个参数：
 export async function getBalanceAndSymbol(
   accountAddress,
   address,
@@ -109,15 +102,12 @@ export async function getBalanceAndSymbol(
   }
 }
 
-// This function swaps two particular tokens / AUT, it can handle switching from AUT to ERC20 token, ERC20 token to AUT, and ERC20 token to ERC20 token.
-// No error handling is done, so any issues can be caught with the use of .catch()
-// To work correctly, there needs to be 7 arguments:
-//    `address1` - An Ethereum address of the token to trade from (either a token or AUT)
-//    `address2` - An Ethereum address of the token to trade to (either a token or AUT)
-//    `amount` - A float or similar number representing the value of address1's token to trade
-//    `routerContract` - The router contract to carry out this trade
-//    `accountAddress` - An Ethereum address of the current user's account
-//    `signer` - The current signer
+// 此功能交换两个特定的代币/AUT，它可以处理从 AUT 到 ERC20 代币、ERC20 到 AUT 和 ERC20 到 ERC20 代币的切换。
+// 没有进行错误处理，因此可以使用 .catch() 防止错误溢出
+//    `amount` - 一个浮点数或类似数字，表示要交易的 address1 代币的价值
+//    `routerContract` - 路由合约
+//    `accountAddress` - 当前用户账户的以太坊地址
+//    `signer` - 当前签名者
 export async function swapTokens(
   address1,
   address2,
@@ -171,11 +161,9 @@ export async function swapTokens(
   }
 }
 
-//This function returns the conversion rate between two token addresses
-//    `address1` - An Ethereum address of the token to swaped from (either a token or AUT)
-//    `address2` - An Ethereum address of the token to swaped to (either a token or AUT)
-//    `amountIn` - Amount of the token at address 1 to be swaped from
-//    `routerContract` - The router contract to carry out this swap
+// 该函数返回两个代币地址之间的转换率
+//    `amountIn` - 交换地址 1 的代币数量
+//    `routerContract` - 执行此交换的路由合约
 export async function getAmountOut(
   address1,
   address2,
@@ -202,12 +190,8 @@ export async function getAmountOut(
   }
 }
 
-// This function calls the pair contract to fetch the reserves stored in a the liquidity pool between the token of address1 and the token
-// of address2. Some extra logic was needed to make sure that the results were returned in the correct order, as
-// `pair.getReserves()` would always return the reserves in the same order regardless of which order the addresses were.
-//    `address1` - An Ethereum address of the token to trade from (either a ERC20 token or AUT)
-//    `address2` - An Ethereum address of the token to trade to (either a ERC20 token or AUT)
-//    `pair` - The pair contract for the two tokens
+// 此函数调用配对合约以获取存储在地址 1 代币和地址 2 代币之间的流动性池中的储备金。 
+// 需要一些额外的逻辑来确保以正确的顺序返回结果，因为“pair.getReserves()”总是以相同的顺序返回储备金，而不管地址的顺序是什么。
 export async function fetchReserves(address1, address2, pair, signer) {
   try {
 
@@ -239,12 +223,11 @@ export async function fetchReserves(address1, address2, pair, signer) {
   }
 }
 
-// This function returns the reserves stored in a the liquidity pool between the token of address1 and the token
-// of address2, as well as the liquidity tokens owned by accountAddress for that pair.
-//    `address1` - An Ethereum address of the token to trade from (either a token or AUT)
-//    `address2` - An Ethereum address of the token to trade to (either a token or AUT)
-//    `factory` - The current factory
-//    `signer` - The current signer
+// 此函数返回存储在地址 1 代币和地址 2 代币之间的流动性池中的储备金，以及 accountAddress 拥有的该货币对的流动性代币。
+//    `address1` - 要交易的代币的以太坊地址（代币或 AUT）
+//    `address2` - 要交易的代币的以太坊地址（代币或 AUT）
+//    `factory` - 
+//    `signer` - 
 export async function getReserves(
   address1,
   address2,
