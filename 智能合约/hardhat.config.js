@@ -5,14 +5,7 @@ module.exports = {
   solidity: {
     compilers: [
       {
-        version: "0.5.16",
-      },
-      {
-        version: "0.4.18",
-        settings: {},
-      },
-      {
-        version: "0.6.6",
+        version: "0.8.16",
         settings: {
           evmVersion:"istanbul",
           optimizer: {
@@ -20,7 +13,7 @@ module.exports = {
             runs: 200,
           },
         },
-      },
+      }
     ],
   },
 };
