@@ -252,7 +252,8 @@ contract UniswapPair is IUniswapV2Pair, UniswapERC20{
         require(success && (data.length == 0 || abi.decode(data, (bool))), "transfer failed");
     }
 
-    function swap(uint amount0Out, uint amount1Out, address to, bytes calldata data) public override{
+    //不能重入,重入可能导致余额计算错误导致多转账等一些bug
+    function swap(uint amount0Out, uint amount1Out, address to, bytes calldata data) public override lock{
         require((amount0Out == 0 || amount1Out == 0) && (amount0Out > 0 || amount1Out > 0), "Pair:amount in should greater than zero");
         (uint112 _reserve0, uint112 _reserve1,) = getReserves();
         require(amount0Out < _reserve0 && amount1Out < _reserve1, "Pair:insufficient liquidity");
@@ -281,8 +282,12 @@ contract UniswapPair is IUniswapV2Pair, UniswapERC20{
         }
         require(amount0In > 0 || amount1In > 0, 'uniswap:insufficient input amount');
         {
-            uint balance0Adjusted = balance0 * 1000 - amount0In * 3; // 扣除千分之三手续费
-            uint balance1Adjusted = balance1 * 1000 - amount1In * 3;
+            //uint balance0Adjusted = balance0 * 1000 - amount0In * 3; // 扣除千分之三手续费
+            uint balance0Adjusted = balance0.mul(1000).sub(amount0In.mul(3));
+
+            // uint balance1Adjusted = balance1 * 1000 - amount1In * 3;
+            uint balance1Adjusted = balance1.mul(1000).sub(amount1In.mul(3));
+
             require(balance0Adjusted.mul(balance1Adjusted) >= uint(_reserve0).mul(_reserve1).mul(1000**2)  , 'UniswapV2: K'); // 新k不能小于老的k
         }
         _update(balance0, balance1, _reserve0, _reserve1);

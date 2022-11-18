@@ -11,6 +11,7 @@
     "@testing-library/user-event": "^13.5.0",
     "bootstrap": "^5.2.0",
     "boring-solidity": "^1.3.1",
+    "cross-env": "^7.0.3",
     "ethereumjs-util": "^6.2.1",
     "ethers": "^5.7.2",
     "ethers-utils": "^2.1.11",
@@ -21,9 +22,11 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "test": "hardhat test --verbose",
+    "test:coverage": "cross-env NODE_OPTIONS=\"--max-old-space-size=2048\" hardhat coverage",
+    "test:gas": "cross-env REPORT_GAS=true yarn test",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
   "author": "gregory@dappuniversity.com",

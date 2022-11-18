@@ -232,7 +232,7 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
         TransferHelper.safeTransferFrom(msg.sender, tokenA, pair, amountA);
         TransferHelper.safeTransferFrom(msg.sender, tokenB, pair, amountB);
         // // mint 流动性
-        IUniswapV2Pair(pair).mint(to);// to是啥呀？to是用户的地址
+        liquidity = IUniswapV2Pair(pair).mint(to);// to是啥呀？to是用户的地址
     }
 
     // --------------------
@@ -289,13 +289,17 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
         address _to,
         uint deadline
     ) public  override ensure(deadline){
+
         // 第一步，转钱到第一个pair合约上
         TransferHelper.safeTransferFrom(
             msg.sender, 
             path[0], 
             UniswapV2Library.pairFor(_factory, path[0], path[1]), 
             amountIn);
-        _swapExactTokens(path, _to);   
+        uint balanceBefore = IUniswapERC20(path[path.length - 1]).balanceOf(_to);
+        _swapExactTokens(path, _to);  
+        uint balanceAfter = IUniswapERC20(path[path.length - 1]).balanceOf(_to);
+        require(balanceAfter.sub(balanceBefore) >= amountOutMin, 'Route02:insufficient amount out');
     }
 
     // 直接转入eth，换取token
@@ -311,7 +315,10 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
         // 1. 打钱
         IWETH10(_WETH).deposit{value:msg.value}();
         assert(IWETH10(_WETH).transfer( UniswapV2Library.pairFor(_factory, _WETH, path[1]), amountIn));
+        uint balanceBefore = IUniswapERC20(path[path.length - 1]).balanceOf(_to);
         _swapExactTokens(path, _to);
+        uint balanceAfter = IUniswapERC20(path[path.length - 1]).balanceOf(_to);
+        require(balanceAfter.sub(balanceBefore) >= amountOutMin, 'Route02:insufficient amount out');
     }
 
     function swapExactTokensForETHSupportingFeeOnTransferTokens(
@@ -545,8 +552,9 @@ library TransferHelper {
     function safeTransfer(address token, address to, uint value) public returns(bool success){
                 // bytes4(keccak256(bytes('transfer(address,uint256)')));
 
-        (bool success, bytes memory data) = token.call(abi.encodeWithSelector(0xa9059cbb, to, value));
+        (bool _success, bytes memory data) = token.call(abi.encodeWithSelector(0xa9059cbb, to, value));
         require(success && (data.length == 0 || abi.decode(data, (bool))), 'TransferHelper: TRANSFER_FAILED');
+        success = _success;
     }
 
     function safeTransferFrom(address from, address token, address to, uint value) public returns(bool success){
@@ -554,8 +562,11 @@ library TransferHelper {
         // (bool success, bytes memory data) = token.call(abi.encodeWithSelector(selector, from, to, value));
         // require(success && (data.length == 0 || abi.decode(data, (bool))), 'TransferHelper: TRANSFER_FROM_FAILED');
         IERC20(token).transferFrom(from, to, value);
+        return true;
     }
+    
     function safeTransferETH(address to, uint value) public returns(bool success){
         payable(to).transfer(value);
+        return true;
     }
 }

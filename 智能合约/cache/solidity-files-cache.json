@@ -1150,6 +1150,1246 @@
       "artifacts": [
         "SushiBar"
       ]
+    },
+    "/Users/nobbyheell/Documents/workspace/myuniswap/智能合约/contracts/ERC20.sol": {
+      "lastModificationDate": 1668589829669,
+      "contentHash": "988fdd180dc993d8fa273e074d8b43d3",
+      "sourceName": "contracts/ERC20.sol",
+      "solcConfig": {
+        "version": "0.8.16",
+        "settings": {
+          "evmVersion": "istanbul",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": false
+          }
+        }
+      },
+      "imports": [
+        "./IERC20.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.6"
+      ],
+      "artifacts": [
+        "ERC20"
+      ]
+    },
+    "/Users/nobbyheell/Documents/workspace/myuniswap/智能合约/contracts/IERC20.sol": {
+      "lastModificationDate": 1668589829665,
+      "contentHash": "9b72f664179ab2cf3dbbc78f1d73d44d",
+      "sourceName": "contracts/IERC20.sol",
+      "solcConfig": {
+        "version": "0.8.16",
+        "settings": {
+          "evmVersion": "istanbul",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": false
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.6"
+      ],
+      "artifacts": [
+        "IERC20"
+      ]
+    },
+    "/Users/nobbyheell/Documents/workspace/myuniswap/智能合约/contracts/UniswapPair.sol": {
+      "lastModificationDate": 1668653764572,
+      "contentHash": "6a9a208e3463e8286366bbaa18533720",
+      "sourceName": "contracts/UniswapPair.sol",
+      "solcConfig": {
+        "version": "0.8.16",
+        "settings": {
+          "evmVersion": "istanbul",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": false
+          }
+        }
+      },
+      "imports": [
+        "./ERC20.sol",
+        "./SafeMath.sol",
+        "./IUniswapERC20.sol",
+        "./IUniswapV2Pair.sol",
+        "./IUniswapV2Factory.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.6"
+      ],
+      "artifacts": [
+        "IUniswapV2Callee",
+        "UniswapERC20",
+        "UniswapFactory",
+        "UniswapPair"
+      ]
+    },
+    "/Users/nobbyheell/Documents/workspace/myuniswap/智能合约/contracts/SafeMath.sol": {
+      "lastModificationDate": 1668589829670,
+      "contentHash": "f0817da090a385140884c6d1ff1c1336",
+      "sourceName": "contracts/SafeMath.sol",
+      "solcConfig": {
+        "version": "0.8.16",
+        "settings": {
+          "evmVersion": "istanbul",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": false
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.6"
+      ],
+      "artifacts": [
+        "Math",
+        "SafeMath",
+        "UQ112x112"
+      ]
+    },
+    "/Users/nobbyheell/Documents/workspace/myuniswap/智能合约/contracts/IUniswapERC20.sol": {
+      "lastModificationDate": 1668589829666,
+      "contentHash": "4e930e4b4b9b8ba41afeba1aa5679708",
+      "sourceName": "contracts/IUniswapERC20.sol",
+      "solcConfig": {
+        "version": "0.8.16",
+        "settings": {
+          "evmVersion": "istanbul",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": false
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.6"
+      ],
+      "artifacts": [
+        "IUniswapERC20"
+      ]
+    },
+    "/Users/nobbyheell/Documents/workspace/myuniswap/智能合约/contracts/IUniswapV2Pair.sol": {
+      "lastModificationDate": 1668589829673,
+      "contentHash": "6dd15aa213f16c0648abfb1604b5594f",
+      "sourceName": "contracts/IUniswapV2Pair.sol",
+      "solcConfig": {
+        "version": "0.8.16",
+        "settings": {
+          "evmVersion": "istanbul",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": false
+          }
+        }
+      },
+      "imports": [
+        "./IUniswapERC20.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.6"
+      ],
+      "artifacts": [
+        "IUniswapV2Pair"
+      ]
+    },
+    "/Users/nobbyheell/Documents/workspace/myuniswap/智能合约/contracts/IUniswapV2Factory.sol": {
+      "lastModificationDate": 1668589829671,
+      "contentHash": "3b9801ea289bd0fb208cfc9ca81e630d",
+      "sourceName": "contracts/IUniswapV2Factory.sol",
+      "solcConfig": {
+        "version": "0.8.16",
+        "settings": {
+          "evmVersion": "istanbul",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": false
+          }
+        }
+      },
+      "imports": [
+        "./SafeMath.sol"
+      ],
+      "versionPragmas": [],
+      "artifacts": [
+        "IUniswapV2Factory"
+      ]
+    },
+    "/Users/nobbyheell/Documents/workspace/myuniswap/智能合约/contracts/UniswapRoute02.sol": {
+      "lastModificationDate": 1668654872083,
+      "contentHash": "1cec33c8969fd5688d67013a5ec8370f",
+      "sourceName": "contracts/UniswapRoute02.sol",
+      "solcConfig": {
+        "version": "0.8.16",
+        "settings": {
+          "evmVersion": "istanbul",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": false
+          }
+        }
+      },
+      "imports": [
+        "./SafeMath.sol",
+        "./IUniswapV2Pair.sol",
+        "./IUniswapV2Factory.sol",
+        "./IERC20.sol",
+        "./WETH10.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.6"
+      ],
+      "artifacts": [
+        "IUniswapV2Router01",
+        "IUniswapV2Router02",
+        "IWETH10",
+        "TransferHelper",
+        "UniswapV2Library",
+        "UniswapV2Router02"
+      ]
+    },
+    "/Users/nobbyheell/Documents/workspace/myuniswap/智能合约/contracts/WETH10.sol": {
+      "lastModificationDate": 1668589829666,
+      "contentHash": "76dc58c900c2ef1a8a9724a42549dbfb",
+      "sourceName": "contracts/WETH10.sol",
+      "solcConfig": {
+        "version": "0.8.16",
+        "settings": {
+          "evmVersion": "istanbul",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": false
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.6"
+      ],
+      "artifacts": [
+        "WETH10"
+      ]
+    },
+    "/Users/nobbyheell/Documents/workspace/myuniswap/智能合约/contracts/ERC20Token.sol": {
+      "lastModificationDate": 1668589829669,
+      "contentHash": "719745b35194d6078427e09dffd9045a",
+      "sourceName": "contracts/ERC20Token.sol",
+      "solcConfig": {
+        "version": "0.8.16",
+        "settings": {
+          "evmVersion": "istanbul",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": false
+          }
+        }
+      },
+      "imports": [
+        "./ERC20.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.6"
+      ],
+      "artifacts": [
+        "ERC20Token"
+      ]
+    },
+    "/Users/nobbyheell/Documents/workspace/myuniswap/智能合约/contracts/ERC20Mocker.sol": {
+      "lastModificationDate": 1668589829671,
+      "contentHash": "d41d8cd98f00b204e9800998ecf8427e",
+      "sourceName": "contracts/ERC20Mocker.sol",
+      "solcConfig": {
+        "version": "0.8.16",
+        "settings": {
+          "evmVersion": "istanbul",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": false
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [],
+      "artifacts": []
+    },
+    "/Users/nobbyheell/Documents/workspace/myuniswap/智能合约/contracts/interfaces/IMasterChef.sol": {
+      "lastModificationDate": 1668589829673,
+      "contentHash": "26dad02c6e5e0c47e86396f551ecde92",
+      "sourceName": "contracts/interfaces/IMasterChef.sol",
+      "solcConfig": {
+        "version": "0.8.16",
+        "settings": {
+          "evmVersion": "istanbul",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": false
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/token/ERC20/ERC20.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.6"
+      ],
+      "artifacts": [
+        "IMasterChef"
+      ]
+    },
+    "/Users/nobbyheell/Documents/workspace/myuniswap/智能合约/node_modules/@openzeppelin/contracts/token/ERC20/ERC20.sol": {
+      "lastModificationDate": 1668589844189,
+      "contentHash": "834a0dde221759af42b030253315b086",
+      "sourceName": "@openzeppelin/contracts/token/ERC20/ERC20.sol",
+      "solcConfig": {
+        "version": "0.8.16",
+        "settings": {
+          "evmVersion": "istanbul",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": false
+          }
+        }
+      },
+      "imports": [
+        "./IERC20.sol",
+        "./extensions/IERC20Metadata.sol",
+        "../../utils/Context.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "ERC20"
+      ]
+    },
+    "/Users/nobbyheell/Documents/workspace/myuniswap/智能合约/node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol": {
+      "lastModificationDate": 1668589844189,
+      "contentHash": "ad7c2d0af148c8f9f097d65deeb4da6b",
+      "sourceName": "@openzeppelin/contracts/token/ERC20/IERC20.sol",
+      "solcConfig": {
+        "version": "0.8.16",
+        "settings": {
+          "evmVersion": "istanbul",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": false
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IERC20"
+      ]
+    },
+    "/Users/nobbyheell/Documents/workspace/myuniswap/智能合约/node_modules/@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol": {
+      "lastModificationDate": 1668589844191,
+      "contentHash": "909ab67fc5c25033fe6cd364f8c056f9",
+      "sourceName": "@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol",
+      "solcConfig": {
+        "version": "0.8.16",
+        "settings": {
+          "evmVersion": "istanbul",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": false
+          }
+        }
+      },
+      "imports": [
+        "../IERC20.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IERC20Metadata"
+      ]
+    },
+    "/Users/nobbyheell/Documents/workspace/myuniswap/智能合约/node_modules/@openzeppelin/contracts/utils/Context.sol": {
+      "lastModificationDate": 1668589844238,
+      "contentHash": "5f2c5c4b6af2dd4551027144797bc8be",
+      "sourceName": "@openzeppelin/contracts/utils/Context.sol",
+      "solcConfig": {
+        "version": "0.8.16",
+        "settings": {
+          "evmVersion": "istanbul",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": false
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Context"
+      ]
+    },
+    "/Users/nobbyheell/Documents/workspace/myuniswap/智能合约/contracts/MasterChefV2.sol": {
+      "lastModificationDate": 1668589829671,
+      "contentHash": "ab8c55c3a47db3b2a130509cce0084e0",
+      "sourceName": "contracts/MasterChefV2.sol",
+      "solcConfig": {
+        "version": "0.8.16",
+        "settings": {
+          "evmVersion": "istanbul",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": false
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol",
+        "@openzeppelin/contracts/utils/math/SafeMath.sol",
+        "@openzeppelin/contracts/access/Ownable.sol",
+        "./libraries/SignedSafeMath.sol",
+        "./interfaces/IRewarder.sol",
+        "./interfaces/IMasterChef.sol",
+        "@openzeppelin/contracts/utils/structs/EnumerableSet.sol",
+        "@openzeppelin/contracts/utils/Address.sol",
+        "./SushiToken.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.6"
+      ],
+      "artifacts": [
+        "IMigratorChef",
+        "MasterChefV2"
+      ]
+    },
+    "/Users/nobbyheell/Documents/workspace/myuniswap/智能合约/node_modules/@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol": {
+      "lastModificationDate": 1668589844190,
+      "contentHash": "0320a90f714843ca19373ed143fc4466",
+      "sourceName": "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol",
+      "solcConfig": {
+        "version": "0.8.16",
+        "settings": {
+          "evmVersion": "istanbul",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": false
+          }
+        }
+      },
+      "imports": [
+        "../IERC20.sol",
+        "../extensions/draft-IERC20Permit.sol",
+        "../../../utils/Address.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "SafeERC20"
+      ]
+    },
+    "/Users/nobbyheell/Documents/workspace/myuniswap/智能合约/node_modules/@openzeppelin/contracts/utils/math/SafeMath.sol": {
+      "lastModificationDate": 1668589844220,
+      "contentHash": "2337f0279507b5edf14a07067adf0d05",
+      "sourceName": "@openzeppelin/contracts/utils/math/SafeMath.sol",
+      "solcConfig": {
+        "version": "0.8.16",
+        "settings": {
+          "evmVersion": "istanbul",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": false
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "SafeMath"
+      ]
+    },
+    "/Users/nobbyheell/Documents/workspace/myuniswap/智能合约/node_modules/@openzeppelin/contracts/access/Ownable.sol": {
+      "lastModificationDate": 1668589844209,
+      "contentHash": "e436cea06129be2c73cda4b1acc848b5",
+      "sourceName": "@openzeppelin/contracts/access/Ownable.sol",
+      "solcConfig": {
+        "version": "0.8.16",
+        "settings": {
+          "evmVersion": "istanbul",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": false
+          }
+        }
+      },
+      "imports": [
+        "../utils/Context.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Ownable"
+      ]
+    },
+    "/Users/nobbyheell/Documents/workspace/myuniswap/智能合约/contracts/libraries/SignedSafeMath.sol": {
+      "lastModificationDate": 1668589829671,
+      "contentHash": "9b36cc08d5b1d0055b97f1a4d5fb2d0a",
+      "sourceName": "contracts/libraries/SignedSafeMath.sol",
+      "solcConfig": {
+        "version": "0.8.16",
+        "settings": {
+          "evmVersion": "istanbul",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": false
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.6"
+      ],
+      "artifacts": [
+        "SignedSafeMath"
+      ]
+    },
+    "/Users/nobbyheell/Documents/workspace/myuniswap/智能合约/contracts/interfaces/IRewarder.sol": {
+      "lastModificationDate": 1668589829673,
+      "contentHash": "a00f0d4ed98db2bf9ea5a335ac7f5231",
+      "sourceName": "contracts/interfaces/IRewarder.sol",
+      "solcConfig": {
+        "version": "0.8.16",
+        "settings": {
+          "evmVersion": "istanbul",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": false
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/token/ERC20/ERC20.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.6"
+      ],
+      "artifacts": [
+        "IRewarder"
+      ]
+    },
+    "/Users/nobbyheell/Documents/workspace/myuniswap/智能合约/node_modules/@openzeppelin/contracts/utils/structs/EnumerableSet.sol": {
+      "lastModificationDate": 1668589844233,
+      "contentHash": "6116ca703456923afc88ce24b466ac80",
+      "sourceName": "@openzeppelin/contracts/utils/structs/EnumerableSet.sol",
+      "solcConfig": {
+        "version": "0.8.16",
+        "settings": {
+          "evmVersion": "istanbul",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": false
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "EnumerableSet"
+      ]
+    },
+    "/Users/nobbyheell/Documents/workspace/myuniswap/智能合约/node_modules/@openzeppelin/contracts/utils/Address.sol": {
+      "lastModificationDate": 1668589844217,
+      "contentHash": "f31ad6fc4bbf9c06203987220156a6ba",
+      "sourceName": "@openzeppelin/contracts/utils/Address.sol",
+      "solcConfig": {
+        "version": "0.8.16",
+        "settings": {
+          "evmVersion": "istanbul",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": false
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.1"
+      ],
+      "artifacts": [
+        "Address"
+      ]
+    },
+    "/Users/nobbyheell/Documents/workspace/myuniswap/智能合约/contracts/SushiToken.sol": {
+      "lastModificationDate": 1668589829672,
+      "contentHash": "c0753d359417410e28f82e42ffbabcda",
+      "sourceName": "contracts/SushiToken.sol",
+      "solcConfig": {
+        "version": "0.8.16",
+        "settings": {
+          "evmVersion": "istanbul",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": false
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/token/ERC20/ERC20.sol",
+        "@openzeppelin/contracts/access/Ownable.sol",
+        "@openzeppelin/contracts/utils/math/SafeMath.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.6"
+      ],
+      "artifacts": [
+        "SushiToken"
+      ]
+    },
+    "/Users/nobbyheell/Documents/workspace/myuniswap/智能合约/node_modules/@openzeppelin/contracts/token/ERC20/extensions/draft-IERC20Permit.sol": {
+      "lastModificationDate": 1668589844191,
+      "contentHash": "fb77f144244b9ab12533aa6ce85ef8c5",
+      "sourceName": "@openzeppelin/contracts/token/ERC20/extensions/draft-IERC20Permit.sol",
+      "solcConfig": {
+        "version": "0.8.16",
+        "settings": {
+          "evmVersion": "istanbul",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": false
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IERC20Permit"
+      ]
+    },
+    "/Users/nobbyheell/Documents/workspace/myuniswap/智能合约/contracts/MasterChef.sol": {
+      "lastModificationDate": 1668589829672,
+      "contentHash": "b681f5f251058d69915f019f11eca5f8",
+      "sourceName": "contracts/MasterChef.sol",
+      "solcConfig": {
+        "version": "0.8.16",
+        "settings": {
+          "evmVersion": "istanbul",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": false
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/token/ERC20/IERC20.sol",
+        "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol",
+        "@openzeppelin/contracts/utils/structs/EnumerableSet.sol",
+        "@openzeppelin/contracts/utils/math/SafeMath.sol",
+        "@openzeppelin/contracts/access/Ownable.sol",
+        "./SushiToken.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.6"
+      ],
+      "artifacts": [
+        "IMigratorChef",
+        "MasterChef"
+      ]
+    },
+    "/Users/nobbyheell/Documents/workspace/myuniswap/智能合约/contracts/SushiBar.sol": {
+      "lastModificationDate": 1668589829669,
+      "contentHash": "645360571967b3e9be406df4570d89ff",
+      "sourceName": "contracts/SushiBar.sol",
+      "solcConfig": {
+        "version": "0.8.16",
+        "settings": {
+          "evmVersion": "istanbul",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": false
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/token/ERC20/ERC20.sol",
+        "@openzeppelin/contracts/token/ERC20/IERC20.sol",
+        "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.7"
+      ],
+      "artifacts": [
+        "SushiBar"
+      ]
+    },
+    "/Users/nobbyheell/Documents/workspace/myuniswap/智能合约/contracts/Mocks/RewarderMock.sol": {
+      "lastModificationDate": 1668589829664,
+      "contentHash": "25f2bb895729e342b73d6d88f1015df8",
+      "sourceName": "contracts/Mocks/RewarderMock.sol",
+      "solcConfig": {
+        "version": "0.8.16",
+        "settings": {
+          "evmVersion": "istanbul",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": false
+          }
+        }
+      },
+      "imports": [
+        "../interfaces/IRewarder.sol",
+        "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.6"
+      ],
+      "artifacts": [
+        "RewarderMock"
+      ]
+    },
+    "/Users/nobbyheell/Documents/workspace/myuniswap/智能合约/contracts/interfaces/IMiniChefV2.sol": {
+      "lastModificationDate": 1668589829673,
+      "contentHash": "aacddd5dd144159d6058e4e4121cc457",
+      "sourceName": "contracts/interfaces/IMiniChefV2.sol",
+      "solcConfig": {
+        "version": "0.8.16",
+        "settings": {
+          "evmVersion": "istanbul",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": false
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.6"
+      ],
+      "artifacts": [
+        "IMiniChefV2"
+      ]
     }
   }
 }
