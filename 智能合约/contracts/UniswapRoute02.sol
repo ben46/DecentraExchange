@@ -394,6 +394,7 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
         uint deadline,
         bool approveMax, uint8 v, bytes32 r, bytes32 s
     ) public override returns (uint amountA, uint amountB){}
+
     function removeLiquidityETHWithPermit(
         address token,
         uint liquidity,
@@ -402,7 +403,14 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
         address to,
         uint deadline,
         bool approveMax, uint8 v, bytes32 r, bytes32 s
-    ) public override returns (uint amountToken, uint amountETH){}
+    ) public override returns (uint amountToken, uint amountETH){
+    //因为这里需要路由合约把用户的LP转入pair中, 
+//操作第三方的合约需要permit/apporve, 
+//所以需要提前把vrs签名弄好, 调用token中的permit函数,permit会调用approve,把allowance授权给路由合约
+//否则没有签名,就没有approve,那就没法转账
+    }
+
+
     function swapExactTokensForTokens(
         uint amountIn,
         uint amountOutMin,
