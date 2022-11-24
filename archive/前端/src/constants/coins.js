@@ -61,7 +61,7 @@ const DEVNETCoins = [
 const PARASTATECoins = [
   {
     name: "Ether",
-    abbr: "ETH",
+    abbr: "WETH",
     address: "", // Weth address is fetched from the router
   },
   {
@@ -90,7 +90,7 @@ const PARASTATECoins = [
 const GANACHECoins = [
   {
     name: "Ether",
-    abbr: "ETH",
+    abbr: "WETH",
     address: "", // Weth address is fetched from the router
   },
   {
@@ -119,7 +119,7 @@ const GANACHECoins = [
 const MAINNETCoins = [
   {
     name: "Ether",
-    abbr: "ETH",
+    abbr: "WETH",
     address: "", // Weth address is fetched from the router
   },
   {
@@ -172,7 +172,7 @@ const MAINNETCoins = [
 const ROPSTENCoins = [
   {
     name: "Ether",
-    abbr: "ETH",
+    abbr: "WETH",
     address: "", // Weth address is fetched from the router
   },
   {
@@ -190,7 +190,7 @@ const ROPSTENCoins = [
 const KOVANCoins = [
   {
     name: "Ether",
-    abbr: "ETH",
+    abbr: "WETH",
     address: "", // // Weth address is fetched from the router
   },
   {
@@ -208,7 +208,7 @@ const KOVANCoins = [
 const RINKEBYCoins = [
   {
     name: "Ether",
-    abbr: "ETH",
+    abbr: "WETH",
     address: "", // Weth address is fetched from the router
   },
   {
@@ -226,7 +226,7 @@ const RINKEBYCoins = [
 const GÖRLICoins = [
   {
     name: "Ether",
-    abbr: "ETH",
+    abbr: "WETH",
     address: "", // Weth address is fetched from the router
   },
   {

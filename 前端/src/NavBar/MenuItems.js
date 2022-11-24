@@ -1,12 +1,12 @@
 export const MenuItems = [
   {
     title: "闪兑",
-    url: "/Alternative-Uniswap-Interface/",
+    url: "/home/",
     cName: "nav-links",
   },
   {
     title: "流动性",
-    url: "/Alternative-Uniswap-Interface/liquidity",
+    url: "/home/liquidity",
     cName: "nav-links",
   },
 ];

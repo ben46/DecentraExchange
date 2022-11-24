@@ -417,8 +417,7 @@ function CoinSwapper(props) {
         alignItems="flex-end"
       >
         <p>
-        Alternative Uniswap Interface | Get AUT for use in the bakerloo testnet{" "}
-          <a href="https://faucet.bakerloo.autonity.network/">here</a>
+        KIWI交易所
         </p>
       </Grid>
     </div>
