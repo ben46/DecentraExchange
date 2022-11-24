@@ -254,7 +254,7 @@ export async function quoteAddLiquidity(
     return [
       amountADesired,
       amountBDesired,
-      amountOut.toPrecision(8),
+      amountOut.toPrecision(18),
     ];
   } else {
     const amountBOptimal = quote(amountADesired, reserveA, reserveB);
@@ -269,7 +269,7 @@ export async function quoteAddLiquidity(
       return [
         amountADesired,
         amountBOptimal,
-        amountOut.toPrecision(8),
+        amountOut.toPrecision(18),
       ];
     } else {
       const amountAOptimal = quote(
@@ -287,7 +287,7 @@ export async function quoteAddLiquidity(
       return [
         amountAOptimal,
         amountBDesired,
-        amountOut.toPrecision(8),
+        amountOut.toPrecision(18),
       ];
     }
   }

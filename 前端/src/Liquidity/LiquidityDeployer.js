@@ -114,7 +114,7 @@ function LiquidityDeployer(props) {
   // Turns the account's balance into something nice and readable
   const formatBalance = (balance, symbol) => {
     if (balance && symbol)
-      return parseFloat(balance).toPrecision(8) + " " + symbol;
+      return parseFloat(balance).toPrecision(18) + " " + symbol;
     else return "0.0";
   };
 
